@@ -6,8 +6,13 @@
 
 - En Uruguay circulan cerca de **5.950 vehículos eléctricos** y hay aproximadamente **460 puntos de carga públicos**. El **88 %** de los autos eléctricos circula al sur del Río Negro (Montevideo, Canelones y Maldonado). *Fuente secundaria: autoencuotas.com, jun-2026, que cita datos de UTE.*
 - UTE informa que su red pública supera los **450 puntos de carga**. En 2026 abrió un llamado para que particulares ofrezcan espacio en sus predios para instalar nuevas estaciones públicas. *Fuente: ute.com.uy, jun-2026.*
+- La adopción crece rápido: **uno de cada cinco vehículos 0 km vendidos en 2025 en Uruguay fue eléctrico** (~20 %). *Fuente: La Tribuna, feb-2026; Ámbito, cierre de ventas 2025.*
+- La carga en la red pública se encareció: a partir de enero de 2026 subió alrededor de un **56 %** tras nuevos aumentos y el fin de los subsidios. *Fuente: Ámbito, 2026.* Esto refuerza el interés en alternativas a la red pública.
+- **Datos a verificar antes del informe final** (aparecen en el borrador pero no encontramos fuente primaria): proyección de 30 %–40 % de eléctricos en ventas de 2026; red pública de UTE con más de 500 puntos en los 19 departamentos y meta de 1.000 puntos hacia 2027. Si no se confirman, se eliminan.
 - UTE recomienda la carga en el domicilio como primera opción, por ser la más económica. *Fuente: autoencuotas.com y sitio de movilidad eléctrica de UTE.*
 - El PDF del obligatorio define el segmento objetivo: personas con vehículo eléctrico que **no tienen punto de carga propio**, porque viven en un apartamento sin cochera o porque su cochera no tiene instalación.
+
+**La tensión que da origen al producto:** la opción recomendada (cargar en casa, con la tarifa del hogar y aprovechando tarifas multihorario) queda fuera del alcance de quien vive en un apartamento sin cochera o con una cochera sin instalación. Esa persona depende de una red pública que se congestiona en los picos y que se encareció, mientras existe infraestructura domiciliaria instalada que permanece ociosa buena parte del día y de la noche.
 
 Las fuentes completas están en el [análisis de competidores](../02-competidores/analisis-competidores.md#7-fuentes).
 

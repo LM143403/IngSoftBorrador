@@ -49,6 +49,8 @@ Usamos una escala cualitativa de **Alto / Medio / Bajo**, que después alimenta 
 | H4 — Desconocimiento de conectores | % de participantes que eligen correctamente su conector en el registro de vehículo (con ayuda) | ≥ 80 % |
 | H7 — Flujos cortos para todas las edades | % que completa "buscar → reservar" sin asistencia | ≥ 80 % |
 | H1 — Preferencia por reservar | % de participantes del segmento sin cochera que declara que usaría la reserva | Exploratorio (cualitativo) |
+| H9 — Problema recurrente | Cantidad de conductores entrevistados que relatan dificultades de carga en el último mes | Exploratorio (cualitativo) |
+| H10 — Barrera del anfitrión | Motivo más citado por anfitriones para no compartir (desconfianza vs. precio) | Exploratorio (cualitativo) |
 | H3/H5 — Disposición del anfitrión | Cantidad de anfitriones potenciales entrevistados que publicarían su cargador y bajo qué condiciones | Exploratorio (cualitativo) |
 
 ## 5. Atributos de calidad (RNF del PDF) y su relación con el valor

@@ -29,7 +29,7 @@
 | C5 | **EVmatch** | EE. UU. | Carga entre particulares con reserva | El modelo más parecido al nuestro: anfitriones residenciales y reserva de franja. |
 | C6 | **Co Charger** | Reino Unido | Carga entre vecinos | Enfocada exactamente en conductores sin carga domiciliaria, como nuestro MVP. |
 
-También identificamos **EVE-APP** (Uruguay), una red privada que, según el MIEM, ofrece ubicación, precios, estado en tiempo real y **reserva** en los puntos que gestiona. No hacemos una ficha completa porque encontramos solo una fuente, pero la tenemos en cuenta en los insights.
+También identificamos **EVE-APP** (Uruguay), una red privada que, según el MIEM, ofrece ubicación, precios, estado en tiempo real y **reserva** en los puntos que gestiona. No hacemos una ficha completa porque encontramos solo una fuente, pero la tenemos en cuenta en los insights. En el borrador del equipo también se mencionó **DMC** como operador privado local de carga pública; queda **pendiente de relevar** con fuente antes del informe final. En cualquier caso, estas redes siguen siendo puntos públicos: no resuelven el caso de quien necesita cargar de noche cerca de su casa.
 
 ## 3. Fichas por competidor
 
@@ -193,6 +193,12 @@ La diferenciación no está en una funcionalidad aislada, porque cada una existe
 
 > Aclaración: no consideramos necesaria una funcionalidad solo porque la tenga un competidor. Cada elemento que incorporamos está en el PDF o responde a un problema de nuestros usuarios.
 
+### 6.4 Pendiente: prueba directa de las aplicaciones
+
+Este análisis se basa en fuentes públicas. Como tarea de refinamiento, cada integrante instala y prueba al menos una app (prioridad: UTE Mueve, por ser la referencia local que los usuarios uruguayos ya tienen instalada) y actualiza las celdas marcadas con ✖. Conclusión a contrastar con esa prueba: **en Uruguay existe la app de la red pública y en el exterior existen apps de carga entre particulares, pero no encontramos una que combine ambos mundos para el caso local.**
+
+[COMPLETAR con lo observado al probar las apps.]
+
 ## 7. Fuentes
 
 Consultadas el 24/09/2026.
@@ -204,6 +210,9 @@ Consultadas el 24/09/2026.
 - UTE Mueve en Google Play: <https://play.google.com/store/apps/details?id=movilidad.ute.com.ute_movilidad_app&hl=es_UY>
 - autoencuotas.com — "Dónde cargar tu auto eléctrico en Uruguay" (jun-2026): <https://autoencuotas.com/donde-cargar-tu-auto-electrico-en-uruguay-mapa-app-y-costos-2026/>
 - MIEM — Precios y red de carga (EVE-APP): <https://www.gub.uy/ministerio-industria-energia-mineria/politicas-y-gestion/precios-red-carga>
+- La Tribuna — "Uno de cada cinco vehículos 0 km vendidos en el 2025 en Uruguay fue eléctrico" (feb-2026): <https://www.latribuna.com.py/lifestyle/ciencia-y-tecnologia/2026/02/19/uno-de-cada-cinco-vehiculos-0-km-vendidos-en-el-2025-en-uruguay-fue-electrico/>
+- Ámbito — "Las ventas de autos eléctricos cerraron el año con una suba del 146,7%": <https://www.ambito.com/uruguay/las-ventas-autos-electricos-cerraron-el-ano-una-suba-del-1467-y-marcaron-un-nuevo-record-n6233318>
+- Ámbito — "La carga de vehículos eléctricos en la red pública sube 56% tras nuevos aumentos y el fin de los subsidios": <https://www.ambito.com/uruguay/la-carga-vehiculos-electricos-la-red-publica-sube-56-nuevos-aumentos-y-el-fin-los-subsidios-n6233071>
 - eOne en App Store: <https://apps.apple.com/mx/app/eone/id6504017827>
 
 **PlugShare**

@@ -2,7 +2,7 @@
 
 > Documento de la Iteración 0 · [Volver al README](../README.md)
 
-> ⚠️ **Aclaración metodológica.** Estas personas **no surgen de entrevistas ni encuestas**, porque en la Iteración 0 todavía no hicimos investigación con usuarios. Son **personas hipotéticas iniciales**. Las construimos a partir del PDF del obligatorio, del análisis de competidores y del contexto uruguayo, y sirven para orientar el descubrimiento. Cada rasgo debe validarse (o descartarse) en las Iteraciones 1 y 2. Los nombres son ficticios.
+> ⚠️ **Aclaración metodológica.** Estas personas **no surgen de entrevistas ni encuestas**: se construyeron antes de hacer investigación con usuarios. Son **personas hipotéticas iniciales**. Las entrevistas planificadas ([guion-entrevistas.md](guion-entrevistas.md)) sirven para contrastarlas. Las construimos a partir del PDF del obligatorio, del análisis de competidores y del contexto uruguayo, y sirven para orientar el descubrimiento. Cada rasgo debe validarse (o descartarse) en las Iteraciones 1 y 2. Los nombres son ficticios.
 
 ---
 
@@ -88,13 +88,17 @@ Esta persona representa directamente el RNF del PDF: *"personas que recién adop
 
 ## Registro de hipótesis derivadas de las personas
 
-| ID | Hipótesis | Persona | Cómo se validaría (Iteraciones 1-2) |
-|---|---|---|---|
-| H1 | Los conductores sin cochera prefieren reservar un cargador privado antes que depender de la disponibilidad de la red pública. | Lucía | Entrevistas + test del prototipo de búsqueda y reserva. |
-| H2 | Ver el costo y el tiempo estimados **antes** de reservar influye en la elección del punto. | Lucía | Test de usabilidad comparando listados con y sin estimación. |
-| H3 | Los anfitriones aceptan recibir desconocidos si pueden ver su reputación y fijar instrucciones de acceso. | Andrés | Entrevistas con propietarios de cargadores. |
-| H4 | Muchos conductores no saben identificar su tipo de conector. | Martín, Lucía | Test del registro de vehículo, midiendo errores. |
-| H5 | Un ingreso por kWh algo por encima del costo de energía motiva a publicar el cargador. | Andrés | Entrevistas. |
-| H6 | Los administradores de edificio necesitan gestionar varios puntos desde una cuenta. | Carolina | Entrevistas. |
-| H7 | Los usuarios de mayor edad completan los flujos principales si son cortos y guiados. | Martín | Test de usabilidad con participantes de distintas edades. |
-| H8 | El historial e ingreso acumulado es suficiente como reporte para el anfitrión. | Carolina | Revisión del prototipo con anfitriones. |
+| ID | Hipótesis | Persona | Cómo se validaría | Resultado |
+|---|---|---|---|---|
+| H1 | Los conductores sin cochera prefieren reservar un cargador privado antes que depender de la disponibilidad de la red pública. | Lucía | Entrevistas + test del prototipo de búsqueda y reserva. | [COMPLETAR] |
+| H2 | Ver el costo y el tiempo estimados **antes** de reservar influye en la elección del punto. | Lucía | Test de usabilidad comparando listados con y sin estimación. | [COMPLETAR] |
+| H3 | Los anfitriones aceptan recibir desconocidos si pueden ver su reputación y fijar instrucciones de acceso. | Andrés | Entrevistas con propietarios de cargadores. | [COMPLETAR] |
+| H4 | Muchos conductores no saben identificar su tipo de conector. | Martín, Lucía | Test del registro de vehículo, midiendo errores. | [COMPLETAR] |
+| H5 | Un ingreso por kWh algo por encima del costo de energía motiva a publicar el cargador. | Andrés | Entrevistas. | [COMPLETAR] |
+| H6 | Los administradores de edificio necesitan gestionar varios puntos desde una cuenta. | Carolina | Entrevistas. | [COMPLETAR] |
+| H7 | Los usuarios de mayor edad completan los flujos principales si son cortos y guiados. | Martín | Test de usabilidad con participantes de distintas edades. | [COMPLETAR] |
+| H8 | El historial e ingreso acumulado es suficiente como reporte para el anfitrión. | Carolina | Revisión del prototipo con anfitriones. | [COMPLETAR] |
+| H9 | Un conductor sin punto de carga propio percibe la carga como un problema **recurrente**, no ocasional. | Lucía | Entrevistas a conductores (preguntas 2, 3, 4 y 6 del guion). | [COMPLETAR] |
+| H10 | La principal barrera del anfitrión para compartir su cargador es la **desconfianza** (acceso a su casa o edificio), no el precio. | Andrés, Carolina | Entrevistas a anfitriones (preguntas 4 y 7 del guion). | [COMPLETAR] |
+
+H1–H8 surgen de las personas; H9 y H10 se agregaron al diseñar el guion de entrevistas. Las entrevistas (tareas T5–T7 de la [Sprint Planning](../06-gestion-del-sprint/sprint-planning.md)) alimentan la columna *Resultado*; lo que no se valide en la Iteración 0 se valida con los prototipos en las Iteraciones 1 y 2.

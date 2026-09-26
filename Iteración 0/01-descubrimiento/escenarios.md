@@ -19,6 +19,8 @@ Los escenarios describen situaciones concretas de uso de los perfiles definidos 
 | **Valor de negocio** | Sin cuenta ni vehículo no hay búsqueda compatible. Es el primer paso para convertir a un conductor en usuario activo. |
 | **Funcionalidades / historias** | US-01, US-02, US-03, US-12, US-13 |
 
+> **Variante nocturna (a considerar en los prototipos):** para quien no tiene cochera, un caso típico es llegar al 20 % de batería y reservar de noche cerca de su casa, por ejemplo **de 22:00 a 06:00**. Esa franja cruza la medianoche; ver la decisión pendiente D10 en el [README](../README.md#decisiones-tomadas-y-pendientes).
+
 ## E2 — El conductor busca un punto compatible y disponible
 
 | Campo | Descripción |

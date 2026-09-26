@@ -1,7 +1,11 @@
 # Iteración 0 — Identificación y definición del problema
 
+**Proyecto:** [NOMBRE DEL PRODUCTO] — MVP de aplicación de carga compartida para vehículos eléctricos
+**Equipo:** [Apellido1] – [Apellido2] – [Apellido3]
 **Mini-proyecto ágil · Ingeniería de Software Ágil 1 · Semestre 2, 2026**
 **Período de la iteración:** 21/09 – 10/10 (según el roadmap del obligatorio)
+
+> **Nota de uso:** los bloques marcados con `[COMPLETAR]` requieren datos propios del equipo (nombres, acuerdos, horas, resultados de entrevistas).
 
 Este README resume la Iteración 0 y funciona como índice de los artefactos detallados. Cada sección enlaza al documento donde está el análisis completo.
 
@@ -10,10 +14,13 @@ Este README resume la Iteración 0 y funciona como índice de los artefactos det
 ```text
 Iteración 0/
 ├── README.md                                  ← este documento (resumen, trazabilidad y checklist)
+├── 00-marco-de-trabajo/
+│   └── marco-de-trabajo.md                    ← roles, adaptación de Scrum, DoR, DoD, políticas, eventos
 ├── 01-descubrimiento/
 │   ├── interesados.md                         ← stakeholders y funcionalidades por interesado
 │   ├── problema.md                            ← problema de negocio, visión, propuesta de valor, supuestos
-│   ├── personas.md                            ← personas hipotéticas y registro de hipótesis
+│   ├── personas.md                            ← personas hipotéticas y registro de hipótesis (H1–H10)
+│   ├── guion-entrevistas.md                   ← guiones para conductores y anfitriones + registro
 │   ├── escenarios.md                          ← 9 escenarios principales
 │   └── valor-negocio.md                       ← valor por escenario y épica, indicadores
 ├── 02-competidores/
@@ -23,11 +30,17 @@ Iteración 0/
 ├── 04-product-backlog/
 │   ├── product-backlog.md                     ← backlog ordenado, épicas, estimaciones, cobertura del PDF
 │   └── historias-usuario.md                   ← 30 historias con criterios de aceptación + RNF
-└── 05-priorizacion/
-    └── priorizacion-prototipos.md             ← MoSCoW, MVP, prototipos priorizados, trazabilidad
+├── 05-priorizacion/
+│   └── priorizacion-prototipos.md             ← MoSCoW, MVP, prototipos priorizados, trazabilidad
+└── 06-gestion-del-sprint/
+    ├── sprint-planning.md                     ← objetivo, capacidad y Sprint Backlog (tareas T1–T14)
+    ├── dailies.md                             ← registro de Daily Scrum
+    ├── seguimiento.md                         ← registro de horas y burndown
+    ├── sprint-review.md                       ← revisión del incremento y feedback
+    └── retrospectiva.md                       ← inspección del proceso y acciones de mejora
 ```
 
-Agregamos `personas.md` a la estructura sugerida para no mezclar las personas con el análisis de interesados.
+Agregamos `personas.md` a la estructura sugerida para no mezclar las personas con el análisis de interesados. Las carpetas `00` y `06` cubren la parte de la rúbrica **general del proyecto** (marco de trabajo, planificación, seguimiento, inspección), que se repite en cada iteración.
 
 ---
 
@@ -40,7 +53,24 @@ Según la rúbrica del obligatorio, el objetivo es **identificar y definir el pr
 | **Identificación del problema a resolver** | Identificación de interesados, lista de funcionalidades por interesado y estudio de competidores; entendimiento del problema de negocio, usuarios, escenarios y valor de negocio. |
 | **Definición del problema/solución** | Story Map, Product Backlog con épicas, historias de usuario y criterios de aceptación; priorización de los prototipos a idear, construir y validar. |
 
-La Iteración 0 **no** incluye prototipos ni frontend: eso corresponde a las Iteraciones 1 y 2. Tampoco incluye entrevistas ni pruebas con usuarios: todo lo que requiere evidencia de usuarios está marcado como **hipótesis a validar**.
+**Objetivo del sprint (Sprint Goal):**
+> Contar con un entendimiento validado del problema y un Product Backlog priorizado con épicas, historias de usuario y criterios de aceptación, más la definición del marco de trabajo del equipo.
+
+La Iteración 0 **no** incluye prototipos ni frontend: eso corresponde a las Iteraciones 1 y 2. Los artefactos de descubrimiento se redactaron antes de hablar con usuarios, por eso todo lo que requiere evidencia está marcado como **hipótesis a validar**. Las entrevistas planificadas ([guion](01-descubrimiento/guion-entrevistas.md)) son el primer paso para contrastarlas; los tests de prototipos, el segundo.
+
+## 1.1 Marco de trabajo
+
+Scrum adaptado a un equipo de 3 personas con 5 h-persona/semana cada una (**30 h-persona por sprint** de 2 semanas). Los tres integrantes forman el Development Team; PO y SM se ejercen en adición al desarrollo.
+
+| Rol | Integrante |
+|---|---|
+| Product Owner | [COMPLETAR] |
+| Scrum Master | [COMPLETAR] |
+| Development Team | Los tres integrantes |
+
+Adaptaciones principales: dailies [COMPLETAR frecuencia/modalidad], PO interno que representa al usuario con evidencia de entrevistas y tests, incremento de la It. 0 = artefactos de descubrimiento. Incluye **Definition of Ready**, **Definition of Done** (con los RNF del PDF), políticas de branching/PR y calendario de eventos.
+
+📄 Detalle: [marco-de-trabajo.md](00-marco-de-trabajo/marco-de-trabajo.md).
 
 ## 2. Contexto del producto
 
@@ -55,7 +85,7 @@ El MVP está dirigido **principalmente a conductores sin punto de carga propio**
 
 > Los conductores de vehículos eléctricos que no pueden cargar en su domicilio no tienen una forma de acceder a cargadores privados cercanos, en una franja asegurada, sabiendo antes de ir si el conector es compatible y cuánto les va a llevar y costar la carga. A la vez, quienes tienen un cargador no tienen un canal ordenado para ofrecerlo bajo sus propias condiciones.
 
-- **Contexto con fuentes:** unos 5.950 vehículos eléctricos y unos 460 puntos de carga públicos en Uruguay; el 88 % de los vehículos está al sur del Río Negro.
+- **Contexto con fuentes:** unos 5.950 vehículos eléctricos y unos 460 puntos de carga públicos en Uruguay; el 88 % de los vehículos está al sur del Río Negro. En 2025, uno de cada cinco 0 km vendidos fue eléctrico, y en 2026 la carga en la red pública subió cerca de un 56 % con el fin de los subsidios.
 - **Situación actual:** red pública de UTE (disponibilidad en el momento, sin reserva según las fuentes), redes privadas (eOne, EVE), mapas colaborativos y acuerdos informales (hipótesis).
 - **Oportunidad:** entre las soluciones que relevamos en Uruguay no encontramos un marketplace de cargadores residenciales con reserva.
 
@@ -90,9 +120,9 @@ Son **personas hipotéticas iniciales**: no provienen de entrevistas.
 | Carolina, 52 | Anfitriona administradora de edificio | Varios puntos; rinde cuentas a la comisión. |
 | Sofía, 29 | Administradora | Modera reportes y evaluaciones. |
 
-De las personas se derivan **8 hipótesis (H1–H8)** para validar en las Iteraciones 1 y 2.
+De las personas se derivan **8 hipótesis (H1–H8)**; al diseñar las entrevistas se sumaron **H9** (la carga es un problema recurrente) y **H10** (la barrera del anfitrión es la desconfianza, no el precio). El registro tiene una columna *Resultado* que se completa con las entrevistas y los tests.
 
-📄 Detalle: [personas.md](01-descubrimiento/personas.md).
+📄 Detalle: [personas.md](01-descubrimiento/personas.md) · Guion de entrevistas: [guion-entrevistas.md](01-descubrimiento/guion-entrevistas.md).
 
 ## 6. Escenarios
 
@@ -160,9 +190,9 @@ Hay un mapa por perfil, con backbone, tareas, historias y cortes de release:
 | EP07 Evaluaciones y reportes | US-21 – US-23 |
 | EP08 Administración | US-27 – US-30 |
 
-Los 4 requerimientos no funcionales del PDF (RNF-01 a RNF-04) se registran como restricciones transversales.
+Los 4 requerimientos no funcionales del PDF (RNF-01 a RNF-04) se registran como restricciones transversales e integran la Definition of Done. Las historias con incertidumbre alta se acompañan de **spikes** con timebox (SPK-01 presentación de tiempo y costo, SPK-02 zona, SPK-03 franjas nocturnas).
 
-📄 Detalle: [product-backlog.md](04-product-backlog/product-backlog.md) · [historias-usuario.md](04-product-backlog/historias-usuario.md).
+📄 Detalle: [product-backlog.md](04-product-backlog/product-backlog.md) · [historias-usuario.md](04-product-backlog/historias-usuario.md) · [spikes](04-product-backlog/product-backlog.md#7-historias-con-incertidumbre-spikes).
 
 ## 11. Priorización
 
@@ -225,6 +255,16 @@ Resumen **Problema → Usuario → Escenario → Épica → Historia → Prototi
 | PR3 Confianza | Administrador, usuarios | E8 | EP07, EP08 | US-23, US-27 – US-30 | P8 |
 | PR1 (novatos) / cuenta | Todos | E1 | EP01, EP03 | US-03 – US-05, US-13 | P9 |
 
+## 14.1 Planificación, seguimiento e inspección del sprint
+
+| Aspecto | Resumen | Detalle |
+|---|---|---|
+| Planificación | Capacidad de 30 h-persona; velocidad no disponible (primera iteración), se planifica por horas. Sprint Backlog con 14 tareas (T1–T14) vinculadas a cada artefacto. | [sprint-planning.md](06-gestion-del-sprint/sprint-planning.md) |
+| Dailies | [COMPLETAR frecuencia]; registro escrito con impedimentos. | [dailies.md](06-gestion-del-sprint/dailies.md) |
+| Seguimiento | Registro de horas por integrante y burndown en horas. | [seguimiento.md](06-gestion-del-sprint/seguimiento.md) |
+| Sprint Review | ¿Se cumplió el objetivo? [COMPLETAR] | [sprint-review.md](06-gestion-del-sprint/sprint-review.md) |
+| Retrospectiva | Acciones de mejora para la Iteración 1: [COMPLETAR] | [retrospectiva.md](06-gestion-del-sprint/retrospectiva.md) |
+
 ## 15. Conclusiones de la Iteración 0
 
 1. **El problema está acotado y es comprobable:** no es "mejorar la movilidad eléctrica", sino la incertidumbre de un segmento concreto (conductores sin carga domiciliaria) para asegurar una carga compatible con costo conocido, y la falta de canal para anfitriones.
@@ -258,16 +298,19 @@ Resumen **Problema → Usuario → Escenario → Épica → Historia → Prototi
 | D7 | ¿La modificación de una franja por el anfitrión requiere aceptación del conductor? | Se aplica y se notifica; el conductor puede cancelar. | US-09, US-24 |
 | D8 | Representación de la "zona" en la búsqueda. | Explorar alternativas en P1. | US-14 |
 | D9 | Reservas futuras de un usuario dado de baja; recordatorio si se reserva con menos de 30 minutos de anticipación. | A definir. | US-28, US-26 |
+| D10 | ¿Se permiten franjas que cruzan la medianoche (ej. 22:00–06:00)? Es el caso típico de carga nocturna para quien no tiene cochera, pero US-08 CA2 hoy lo rechaza. | Explorar en P5 y con las entrevistas (SPK-03). | US-08, US-14, US-18 |
 
 ## 16. Fuentes utilizadas
 
 - **Fuente principal:** *Mini-proyecto ágil — ISA1, semestre 2, 2026* (PDF oficial del obligatorio).
-- **Mercado y competidores:** UTE (carga de vehículos, UTE Mueve, llamado 2026), MIEM (EVE-APP), autoencuotas.com (datos de Uruguay 2026), App Store y Google Play (UTE Mueve, eOne, PlugShare, Electromaps, EVmatch, Co Charger), sitios oficiales de EVmatch, Co Charger y Electromaps, Blink Charging, Charged EVs y Buscatucoche. Enlaces completos en [analisis-competidores.md §7](02-competidores/analisis-competidores.md#7-fuentes).
+- **Mercado y competidores:** UTE (carga de vehículos, UTE Mueve, llamado 2026), MIEM (EVE-APP), autoencuotas.com (datos de Uruguay 2026), La Tribuna y Ámbito (ventas 2025 y tarifas de carga 2026), App Store y Google Play (UTE Mueve, eOne, PlugShare, Electromaps, EVmatch, Co Charger), sitios oficiales de EVmatch, Co Charger y Electromaps, Blink Charging, Charged EVs y Buscatucoche. Enlaces completos en [analisis-competidores.md §7](02-competidores/analisis-competidores.md#7-fuentes).
 - **Técnicas:** User Story Mapping (J. Patton), MoSCoW, formato de visión de producto (G. Moore), historias de usuario con criterios *Dado/Cuando/Entonces*, Guía de Scrum.
 
 ---
 
 ## Checklist de cumplimiento de la rúbrica — Iteración 0
+
+Leyenda: ✅ completo · ⏳ estructura lista, falta completar con datos del equipo
 
 | Criterio | Evidencia | Archivo | Estado |
 |---|---|---|:-:|
@@ -286,3 +329,13 @@ Resumen **Problema → Usuario → Escenario → Épica → Historia → Prototi
 | Priorización | MoSCoW con justificación por historia; MVP definido | [priorizacion-prototipos.md](05-priorizacion/priorizacion-prototipos.md) | ✅ |
 | Prototipos priorizados | 9 prototipos con usuario, problema, historias, valor, motivo, iteración y plan de validación | [priorizacion-prototipos.md §4](05-priorizacion/priorizacion-prototipos.md#4-priorización-de-prototipos) | ✅ |
 | Trazabilidad | Matriz Problema → Usuario → Escenario → Épica → Historia → Prototipo | [priorizacion-prototipos.md §5](05-priorizacion/priorizacion-prototipos.md#5-matriz-de-trazabilidad) | ✅ |
+
+### Rúbrica general del proyecto (evidencia de esta iteración)
+
+| Criterio | Evidencia | Archivo | Estado |
+|---|---|---|:-:|
+| Definición del marco de trabajo | Roles por integrante, justificación de la adaptación, DoR, DoD, políticas y eventos | [marco-de-trabajo.md](00-marco-de-trabajo/marco-de-trabajo.md) | ⏳ |
+| Planificación de la iteración | Sprint Goal, capacidad, Sprint Backlog con tareas y estimaciones | [sprint-planning.md](06-gestion-del-sprint/sprint-planning.md) | ⏳ |
+| Seguimiento de la iteración | Dailies, registro de horas por integrante, burndown | [dailies.md](06-gestion-del-sprint/dailies.md) · [seguimiento.md](06-gestion-del-sprint/seguimiento.md) | ⏳ |
+| Inspección y adaptación del proceso | Sprint Review y retrospectiva con acciones de mejora | [sprint-review.md](06-gestion-del-sprint/sprint-review.md) · [retrospectiva.md](06-gestion-del-sprint/retrospectiva.md) | ⏳ |
+| Repositorio | Branching, PRs revisados por otro integrante, merge a `main` al cierre | [marco-de-trabajo.md §5](00-marco-de-trabajo/marco-de-trabajo.md#5-políticas-de-trabajo-y-repositorio) | ⏳ |

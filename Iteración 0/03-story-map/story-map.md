@@ -14,6 +14,8 @@ Seguimos la técnica de *User Story Mapping* (Jeff Patton):
   - **Release 2 — completar funcionalidades del PDF** (prototipos de la Iteración 2).
   - **Posterior:** ideas fuera del alcance del obligatorio (*Won't Have por ahora*).
 
+> **Pendiente:** exportar el story map del equipo (físico o digital, por ejemplo en Miro o FigJam) como `story-map.png` en esta carpeta y enlazarlo acá. Las tablas de este documento son la versión de texto, versionable, del mismo mapa.
+
 Como el producto tiene tres perfiles con recorridos distintos, armamos **un mapa por perfil**, ordenados según su prioridad para el MVP: conductor (usuario principal), anfitrión (oferta) y administrador (moderación).
 
 ## 2. Recorrido del conductor (usuario principal del MVP)

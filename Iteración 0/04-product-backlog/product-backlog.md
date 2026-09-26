@@ -134,3 +134,15 @@ Cada requisito funcional del PDF está cubierto por al menos una historia.
 | Notificaciones | Conductor cancela → notificar al anfitrión | US-19, US-25 |
 | Notificaciones | Recordatorio 30 minutos antes | US-26 |
 | RNF | Límite de 300 puntos, usabilidad, móvil, guías de plataforma | RNF-01 a RNF-04 ([ver](historias-usuario.md#requerimientos-no-funcionales-restricciones-transversales)) |
+
+## 7. Historias con incertidumbre (spikes)
+
+Siguiendo el criterio de **épicas complejas**, cuando una historia tiene incertidumbre alta sobre *qué* construir o *cómo* presentarlo, se separa una parte de **investigación** (spike, con timebox en horas y sin puntos) de la parte de **desarrollo** (la historia estimada en puntos). Así la historia cumple la DoR (*estimable*) sin inflar su estimación.
+
+| ID | Spike (investigación) | Historia de desarrollo | Qué ya está resuelto | Qué falta resolver | Cómo se resuelve | Timebox |
+|---|---|---|---|---|---|---|
+| SPK-01 | Presentación de tiempo y costo estimados | US-16 | La fórmula (S1–S4, confirmada en D3): 60 kWh al 20 % → 48 kWh; a 7 kW ≈ 7 h; a $8/kWh = $384. | Cómo prefiere verlo el usuario (valores exactos o rangos, orden por defecto, cómo se muestra la *carga parcial* de S5). | Crazy 8s y test del prototipo P1 (Iteración 1). | [COMPLETAR] h |
+| SPK-02 | Representación de la "zona" en la búsqueda | US-14 | Los parámetros de búsqueda (zona, día, franja, nivel), definidos por el PDF. | Lista de barrios, texto libre o mapa (decisión D8). | Alternativas en Crazy 8s del prototipo P1 (Iteración 1). | [COMPLETAR] h |
+| SPK-03 | Franjas que cruzan la medianoche | US-08, US-14, US-18 | Las franjas se cargan por día (PDF). | Si una franja como 22:00–06:00 se permite y cómo se carga en la agenda (decisión D10). | Entrevistas (H9) y prototipo P5. | [COMPLETAR] h |
+
+Los spikes se planifican en la Sprint Planning de la Iteración 1 como tareas con horas, no como historias.

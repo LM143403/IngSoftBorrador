@@ -5,7 +5,7 @@
 ## Convenciones
 
 - **Formato:** *Como [actor], quiero [objetivo], para [beneficio].*
-- **Criterios de aceptación** en formato *Dado / Cuando / Entonces*. Describen comportamientos **observables en el frontend**.
+- **Criterios de aceptación** en formato *Dado / Cuando / Entonces* (estilo Gherkin; exigido por la [Definition of Ready](../00-marco-de-trabajo/marco-de-trabajo.md#3-definition-of-ready-dor)). Describen comportamientos **observables en el frontend**.
 - **Estimación:** puntos de historia (serie de Fibonacci 1-2-3-5-8), relativos entre sí. Es una **estimación inicial** del equipo que se va a recalibrar en la Sprint Planning de la Iteración 1, cuando tengamos velocidad real.
 - **MoSCoW / release:** ver la justificación en [priorizacion-prototipos.md](../05-priorizacion/priorizacion-prototipos.md).
 - **Origen:** *PDF* = requisito explícito del obligatorio; *Propuesta* = agregada por el equipo porque es necesaria para completar un requisito del PDF (ver [interesados.md §5](../01-descubrimiento/interesados.md#5-funcionalidades-por-interesado)).
@@ -145,6 +145,7 @@
 5. **Dado que** administro un edificio, **cuando** registro un segundo punto con la misma dirección y otro nombre, **entonces** ambos aparecen en "Mis puntos" *(permite el caso de edificio; hipótesis H6)*.
 6. **Dado que** la aplicación ya tiene 300 puntos registrados (límite del RNF-01, decisión D4), **cuando** un anfitrión intenta registrar uno más, **entonces** se muestra un mensaje indicando que se alcanzó el límite de puntos de la plataforma y el punto no se registra.
 7. **Dado que** registré el punto, **cuando** todavía no publiqué condiciones ni agenda, **entonces** el punto figura como "Incompleto" y no aparece en las búsquedas.
+8. **Dado que** acabo de registrar un punto, **cuando** se confirma el alta, **entonces** se me invita a publicar sus condiciones de servicio (US-07) para completarlo.
 
 ### US-07 — Publicar condiciones del servicio
 
@@ -176,7 +177,7 @@
 **Criterios de aceptación**
 
 1. **Dado que** estoy en la agenda de un punto, **cuando** elijo un día y agrego una franja con hora de inicio y fin, **entonces** la franja aparece en ese día como *Libre*.
-2. **Dado que** agrego una franja cuya hora de fin es anterior o igual a la de inicio, **cuando** guardo, **entonces** se muestra un error.
+2. **Dado que** agrego una franja cuya hora de fin es anterior o igual a la de inicio, **cuando** guardo, **entonces** se muestra un error. *(Revisar según la decisión D10: las franjas nocturnas, como 22:00–06:00, cruzan la medianoche; ver SPK-03.)*
 3. **Dado que** agrego una franja que se superpone con otra del mismo día, **cuando** guardo, **entonces** se muestra un error y no se agrega.
 4. **Dado que** tengo una franja *Libre*, **cuando** la elimino, **entonces** deja de estar disponible para los conductores.
 5. **Dado que** una franja está *Reservada*, **cuando** la veo en la agenda, **entonces** se distingue visualmente de las libres y no puede eliminarse directamente: se me dirige a cancelar o modificar la reserva (US-09).
@@ -301,7 +302,7 @@
 5. **Dado que** no hay resultados, **cuando** termina la búsqueda, **entonces** se muestra "No hay puntos compatibles disponibles en esa zona y franja" con la sugerencia de cambiar zona o franja.
 6. **Dado que** hay 300 puntos registrados (RNF-01), **cuando** busco, **entonces** el listado se muestra correctamente (se verificará con datos simulados).
 
-> **Decisión pendiente:** cómo se representa la "zona" (barrio/localidad de una lista, texto libre o mapa). Se explorará en los prototipos de la Iteración 1.
+> **Decisión pendiente (D8):** cómo se representa la "zona" (barrio/localidad de una lista, texto libre o mapa). Se explorará en los prototipos de la Iteración 1 (spike SPK-02 del [Product Backlog](product-backlog.md#7-historias-con-incertidumbre-spikes)).
 
 ### US-15 — Ver solo puntos compatibles y disponibles
 
@@ -341,6 +342,8 @@
 4. **Dado que** veo los resultados, **cuando** elijo ordenar por costo o por tiempo, **entonces** el listado se reordena de menor a mayor.
 5. **Dado que** veo una estimación, **cuando** la leo, **entonces** se aclara que es aproximada.
 
+> **Spike SPK-01:** la fórmula está confirmada (D3); la forma de presentarla se valida con el prototipo P1 ([Product Backlog §7](product-backlog.md#7-historias-con-incertidumbre-spikes)).
+
 ### US-17 — Ver el detalle y las condiciones de un punto
 
 > **Como** conductor,
@@ -378,7 +381,7 @@
 1. **Dado que** estoy en el detalle de un punto, **cuando** elijo una franja libre, **entonces** veo un resumen con punto, día, horario, tiempo y costo estimados antes de confirmar.
 2. **Dado que** confirmo la reserva, **entonces** se muestra un mensaje de éxito, la reserva aparece en "Mis reservas" y se habilitan la dirección exacta y las instrucciones de acceso.
 3. **Dado que** reservé una franja, **cuando** otro conductor busca en ese horario, **entonces** esa franja ya no figura como libre.
-4. **Dado que** la franja fue tomada por otro conductor mientras yo decidía, **cuando** confirmo, **entonces** se informa que ya no está disponible y no se crea la reserva.
+4. **Dado que** la franja fue tomada por otro conductor mientras yo decidía, **cuando** confirmo, **entonces** se informa que ya no está disponible, no se crea la reserva y vuelvo al listado de resultados actualizado.
 5. **Dado que** el horario elegido supera la duración máxima por sesión del punto, **cuando** intento confirmar, **entonces** se informa el límite y se ajusta la hora de fin.
 6. **Dado que** mi cuenta también tiene perfil anfitrión, **cuando** busco carga, **entonces** mis propios puntos no aparecen en los resultados y no puedo reservarlos *(consecuencia de D2)*.
 
@@ -465,7 +468,7 @@
 
 **Criterios de aceptación**
 
-1. **Dado que** tengo una reserva vigente a las 19:00, **cuando** son las 18:30, **entonces** recibo un recordatorio con el nombre del punto, la dirección y el horario.
+1. **Dado que** tengo una reserva vigente a las 19:00, **cuando** son las 18:30, **entonces** recibo un recordatorio con el nombre del punto, la dirección, el horario y acceso a las instrucciones de acceso.
 2. **Dado que** la reserva fue cancelada antes de las 18:30, **cuando** llega ese horario, **entonces** no recibo el recordatorio.
 3. **Dado que** la reserva se hizo con menos de 30 minutos de anticipación, **cuando** se confirma, **entonces** el comportamiento queda **pendiente de definir** (enviar recordatorio inmediato o no enviarlo).
 
@@ -606,7 +609,7 @@
 
 ## Requerimientos no funcionales (restricciones transversales)
 
-No son historias. Son **restricciones** que aplican a varias historias y que se van a incorporar a la *Definition of Done* en la Iteración 1.
+No son historias. Son **restricciones** que aplican a varias historias y que ya están incorporadas a la [Definition of Done](../00-marco-de-trabajo/marco-de-trabajo.md#4-definition-of-done-dod) y se verifican desde la Iteración 1.
 
 | ID | RNF (PDF) | Historias afectadas | Cómo se verificará |
 |---|---|---|---|

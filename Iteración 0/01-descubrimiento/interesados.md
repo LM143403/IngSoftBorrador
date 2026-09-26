@@ -12,7 +12,7 @@ Un interesado se incluye en este análisis si cumple al menos una de estas condi
 
 No se agregan interesados solo para aumentar la cantidad. Cada uno lleva su justificación.
 
-**Nota de evidencia:** en esta iteración todavía no hicimos entrevistas ni encuestas. Todo lo que figura como necesidad, problema o frustración surge de la lectura del PDF, del análisis de competidores ([analisis-competidores.md](../02-competidores/analisis-competidores.md)) y del razonamiento del equipo. Por eso lo tratamos como **hipótesis a validar** en las Iteraciones 1 y 2, salvo cuando se indica que viene directamente del PDF.
+**Nota de evidencia:** este análisis se redactó antes de las entrevistas. Todo lo que figura como necesidad, problema o frustración surge de la lectura del PDF, del análisis de competidores ([analisis-competidores.md](../02-competidores/analisis-competidores.md)) y del razonamiento del equipo. Por eso lo tratamos como **hipótesis a validar**, salvo cuando se indica que viene directamente del PDF. Las entrevistas ([guion-entrevistas.md](guion-entrevistas.md)) y los tests de prototipos de las Iteraciones 1 y 2 son los que las confirman o descartan.
 
 ## 2. Interesados primarios (usuarios directos, definidos en el PDF)
 
@@ -73,7 +73,7 @@ En el MVP ambos usan el mismo perfil y las mismas funcionalidades, como indica e
 |---|---|---|
 | **Comunidad de usuarios** | El PDF menciona explícitamente "reportes de la comunidad". Conductores y anfitriones, en conjunto, generan evaluaciones y reportes que benefician a otros usuarios. | No es un perfil distinto: es el conjunto de conductores y anfitriones actuando como fuente de información (evaluaciones, reportes). Se refleja en las historias de evaluación y reporte. |
 | **Copropietarios del edificio** | Cuando el anfitrión es un administrador de edificio, las personas que viven allí se ven afectadas por el ingreso de conductores externos a las cocheras. | No usan la aplicación. Se consideran a través de las *instrucciones de acceso* y la *duración máxima por sesión* que publica el anfitrión. Queda como riesgo a indagar. |
-| **Conductores potenciales (futuros adoptantes)** | El PDF pide que la aplicación sea fácil de usar para personas que *recién adoptan* la movilidad eléctrica y no conocen conectores ni potencias. | Se reflejan en el RNF de usabilidad y en la historia de ayuda sobre conectores (US-13). |
+| **Conductores potenciales (futuros adoptantes / indecisos)** | El PDF pide que la aplicación sea fácil de usar para personas que *recién adoptan* la movilidad eléctrica y no conocen conectores ni potencias. Incluye a quien **evalúa comprar un vehículo eléctrico pero no puede cargar en su casa**: necesita certeza de que va a poder cargar antes de comprar, y es una fuente de crecimiento futuro de la demanda. | Se reflejan en el RNF de usabilidad, en la historia de ayuda sobre conectores (US-13) y en la persona Martín. |
 | **Equipo docente** | Define el alcance, la rúbrica y valida la herramienta de prototipado. | Condiciona el proceso, no el producto. Las decisiones pendientes se listan en el [README](../README.md#15-conclusiones-de-la-iteración-0). |
 
 **Interesados que consideramos y descartamos para el MVP:** la empresa distribuidora de energía (UTE) y los operadores de redes públicas de carga. Son relevantes para el contexto del mercado (ver [competidores](../02-competidores/analisis-competidores.md)), pero el PDF no define ninguna interacción del sistema con ellos. Por eso no los tratamos como interesados del producto en esta etapa.
