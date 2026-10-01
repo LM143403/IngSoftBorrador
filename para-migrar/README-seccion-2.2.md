@@ -1,21 +1,3 @@
-<!--
-Fragmento para pegar en Iteracion-0/README.md, reemplazando la lista que hoy está bajo
-"## 2. Definición del problema / solución".
-Pablo pega 2.1 (y deja los títulos 2.2 y 2.3); Facundo completa 2.2; Sebastián completa 2.3.
--->
-
-## 2. Definición del problema / solución
-
-### 2.1 Story map
-
-Armamos un único mapa con el recorrido completo: primero el anfitrión publica su punto y después el conductor busca, compara y reserva; al final está la moderación del administrador. El backbone tiene **8 actividades, y cada una es una épica del backlog con el mismo nombre**: *Acceder a mi cuenta, Gestionar mi punto de carga, Registrar mi vehículo, Buscar y comparar puntos, Reservar una franja, Recibir avisos, Evaluar y reportar* y *Administrar la plataforma*.
-
-Las historias se ordenan en tres cortes: **R1 (MVP, Iteración 1)**, **R2 (completar la letra, Iteración 2)** y **Posterior** (ideas fuera del alcance).
-
-<!-- ![Story map](story-map/story-map.png) -->
-
-Detalle: [story-map/story-map.md](story-map/story-map.md)
-
 ### 2.2 Product Backlog
 
 El backlog tiene **8 épicas y 30 historias de usuario (77 puntos)**, todas con criterios de aceptación en formato *Dado / Cuando / Entonces*. Cada historia US-xx corresponde a la funcionalidad F-xx con el mismo número (ver [1.2](#12-funcionalidades-por-interesado)).
@@ -35,7 +17,3 @@ El backlog tiene **8 épicas y 30 historias de usuario (77 puntos)**, todas con 
 Priorizamos con **MoSCoW**: 12 historias *Must* forman el MVP (37 puntos), 12 son *Should* y 6 son *Could*. Ninguna funcionalidad de la letra quedó como *Won't Have*. El backlog también incluye los supuestos de producto que usan las historias y los hallazgos de las entrevistas que las respaldan.
 
 Detalle: [backlog/product-backlog.md](backlog/product-backlog.md) · [Historias y criterios de aceptación](backlog/historias-usuario.md)
-
-### 2.3 Priorización de prototipos
-
-<!-- Pendiente: Sebastián -->
